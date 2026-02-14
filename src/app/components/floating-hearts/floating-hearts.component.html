@@ -1,0 +1,13 @@
+<div class="hearts-container">
+    <div *ngFor="let heart of hearts" class="heart" [ngStyle]="{
+         'left': heart.left,
+         'font-size': heart.size,
+         'animation-delay': heart.delay,
+         'animation-duration': heart.duration,
+         'opacity': heart.opacity,
+         'z-index': heart.zIndex,
+         'filter': 'blur(' + heart.blur + ')'
+       }">
+        ❤
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="app-container">
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <app-floating-hearts></app-floating-hearts>
+  <app-home *ngIf="currentSection === 'home'" (start)="navigateTo('story')"></app-home>
+  <app-story *ngIf="currentSection === 'story'" (next)="navigateTo('proposal')"></app-story>
+  <app-proposal *ngIf="currentSection === 'proposal'"></app-proposal>
+</div>

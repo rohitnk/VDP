@@ -1,0 +1,22 @@
+<div class="proposal-container" [class.success]="isYesClicked">
+    <div class="proposal-content glass-card" *ngIf="!isYesClicked">
+        <h1 class="proposal-question">Renuka, will you marry me?</h1>
+        <div class="button-group">
+            <button class="romantic-btn yes-btn" (click)="onYes()">YES!</button>
+            <button class="romantic-btn no-btn" (mouseenter)="moveNoButton()" (click)="onNoClick()"
+                [disabled]="isNoDisabled" [ngStyle]="noButtonStyle">
+                {{ noButtonText }}
+            </button>
+        </div>
+        <p class="funny-tip" *ngIf="noAttempts > 0 && !isNoDisabled">Wait, Rinku, you can't catch me! 😂</p>
+        <p class="funny-tip" *ngIf="isNoDisabled">Oops! The 'No' button retired. Only 'Yes' left! ❤️</p>
+    </div>
+
+    <div class="success-message" *ngIf="isYesClicked">
+        <h1 class="celebration-title">RINKU SAID YES!</h1>
+        <p class="celebration-text">I am the luckiest person to have you, Renuka. Let's start our forever journey
+            together!</p>
+        <p class="signature-text">— Yours, Rohit Kalpavruksha</p>
+        <div class="heart-animation">❤❤❤</div>
+    </div>
+</div>

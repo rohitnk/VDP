@@ -1,0 +1,145 @@
+.proposal-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.proposal-content {
+    text-align: center;
+    z-index: 20;
+    max-width: 500px;
+    width: 90%;
+    animation: scaleUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.proposal-question {
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+    line-height: 1.2;
+    animation: heartPulse 2s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 20px rgba(233, 30, 99, 0.2);
+    }
+}
+
+.button-group {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    position: relative;
+    min-height: 80px;
+    align-items: center;
+}
+
+.yes-btn {
+    padding: 20px 60px;
+    font-size: 1.8rem;
+    z-index: 20;
+    text-transform: uppercase;
+}
+
+.no-btn {
+    background: #bbb !important;
+    background: linear-gradient(to right, #ccc, #bbb) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    position: absolute;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 15;
+    white-space: nowrap;
+}
+
+.funny-tip {
+    margin-top: 2rem;
+    color: var(--deep-romantic);
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+}
+
+.funny-tip {
+    margin-top: 1.5rem;
+    color: var(--deep-romantic);
+    font-style: italic;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.success-message {
+    text-align: center;
+    animation: scaleUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.celebration-title {
+    font-size: 4rem;
+    color: var(--deep-romantic);
+}
+
+.celebration-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 600px;
+}
+
+.signature-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--deep-romantic);
+    margin-top: 1.5rem;
+    animation: fadeIn 2s ease-in;
+}
+
+.heart-animation {
+    font-size: 3rem;
+    margin-top: 2rem;
+    animation: bounce 1s infinite;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
